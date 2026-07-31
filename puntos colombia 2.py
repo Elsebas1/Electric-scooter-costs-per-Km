@@ -65,7 +65,7 @@ def calculate_points(new_list):
 
         if user_spend < 0:
             print("The ammount cannot be negative.")
-            return None
+            return
 
         else:
             for card in new_list:
@@ -127,7 +127,7 @@ def main():
         print(
             "3. Calculate the colombian points amount you would receive if you spend money"
         )
-        print("4. Salir")
+        print("4. Leave")
 
         option = int(input("Choose an option betwwen 1 and 4: "))
 
