@@ -45,14 +45,16 @@ def cost(kilometres, maintance_cost, km_mant):
     return set_limpio
 
 
-def recorrido_total(kilometros_totales, valor_mant, km_mant):
+def total_distance(total_kilometres, mant_cost, km_mant):
 
-    suma = sum(kilometros_totales)
+    addition = sum(total_kilometres)
 
-    if suma > 0:
-        total_recorrido = (valor_mant * suma) / km_mant
+    if addition > 0:
+        distance = (mant_cost * addition) / km_mant
 
-    return f"En total se recorrieron {suma} km con un costo total de: {total_recorrido:.0f} pesos"
+    return (
+        f"A total of {addition} km was covered at a total cost of: {distance:.0f} pesos"
+    )
 
 
 def main():
@@ -71,17 +73,17 @@ def main():
     while opcion >= 1 and opcion <= 3:
         match opcion:
             case 1:
-                lista_recorridos, valor_mant, km_mant = informacion_kilometros()
+                lista_recorridos, mant_cost, km_mant = informacion_kilometros()
 
                 print(f"Los valores registados son: {lista_recorridos}")
             case 2:
-                revision = cost(lista_recorridos, valor_mant, km_mant)
+                revision = cost(lista_recorridos, mant_cost, km_mant)
 
                 print(f"{revision}")
 
             case 3:
-                totalidad_recorridos = recorrido_total(
-                    lista_recorridos, valor_mant, km_mant
+                totalidad_recorridos = total_distance(
+                    lista_recorridos, mant_cost, km_mant
                 )
 
                 print(f"{totalidad_recorridos}")
