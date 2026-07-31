@@ -30,7 +30,7 @@ def informacion_kilometros():
     return route, maintenance_cost, maintance_km
 
 
-def costos(kilometres, maintance_cost, km_mant):
+def cost(kilometres, maintance_cost, km_mant):
 
     maintance_per_km = maintance_cost / km_mant
     print(f"The km cost is: {maintance_per_km}")
@@ -75,7 +75,7 @@ def main():
 
                 print(f"Los valores registados son: {lista_recorridos}")
             case 2:
-                revision = costos(lista_recorridos, valor_mant, km_mant)
+                revision = cost(lista_recorridos, valor_mant, km_mant)
 
                 print(f"{revision}")
 
