@@ -1,18 +1,18 @@
 """
-Costos por km de patineta
+Electric scooter cost
 """
 
-print("--- Validación de costos partineta ---")
+print("--- Electric scooter cost validation ---")
 
 
 def informacion_kilometros():
 
-    registro = input("¿Desea registrar kilometraje? (S / N): ").lower()
+    record = input("¿Desea registrar kilometraje? (S / N): ").lower()
     valor_mantenimiento = 250_000
     kilometros_mantenimiento = 800
 
     recorrido = []
-    while registro == "s":
+    while record == "s":
         try:
             camino = float(input("¿Cuántos kilometros va a recorrer hoy?: "))
 
@@ -25,7 +25,7 @@ def informacion_kilometros():
         except ValueError:
             print("Solo es posible colocar números")
 
-        registro = input("¿Desea registrar kilometraje? (S / N): ").lower()
+        record = input("¿Desea registrar kilometraje? (S / N): ").lower()
 
     return recorrido, valor_mantenimiento, kilometros_mantenimiento
 
