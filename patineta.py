@@ -7,27 +7,27 @@ print("--- Electric scooter cost validation ---")
 
 def informacion_kilometros():
 
-    record = input("¿Desea registrar kilometraje? (S / N): ").lower()
-    valor_mantenimiento = 250_000
-    kilometros_mantenimiento = 800
+    record = input("¿Do you wish to record km? (Y / N): ").lower()
+    maintenance_cost = 250_000
+    maintance_km = 800
 
-    recorrido = []
-    while record == "s":
+    route = []
+    while record == "y":
         try:
-            camino = float(input("¿Cuántos kilometros va a recorrer hoy?: "))
+            path = float(input("How many kilometres will you cover today?: "))
 
-            if camino <= 0:
-                print("Este dato no se puede registrar")
+            if path <= 0:
+                print("That information can not be recorded.")
                 continue
 
             else:
-                recorrido.append(camino)
+                route.append(path)
         except ValueError:
-            print("Solo es posible colocar números")
+            print("It is just possible written numbers.")
 
-        record = input("¿Desea registrar kilometraje? (S / N): ").lower()
+        record = input("¿Do you wish to record km? (Y / N): ").lower()
 
-    return recorrido, valor_mantenimiento, kilometros_mantenimiento
+    return route, maintenance_cost, maintance_km
 
 
 def costos(kilometros, valor_mant, km_mant):
