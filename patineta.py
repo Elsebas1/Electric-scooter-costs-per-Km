@@ -5,7 +5,7 @@ Electric scooter cost
 print("--- Electric scooter cost validation ---")
 
 
-def informacion_kilometros():
+def kilometres_information():
 
     record = input("¿Do you wish to record km? (Y / N): ").lower()
     maintenance_cost = 250_000
@@ -59,49 +59,47 @@ def total_distance(total_kilometres, mant_cost, km_mant):
 
 def main():
 
-    print("\n---Menú---")
-    print("1. Registrar kilometros")
-    print("2. Ver costo de cada kilometro registrado")
-    print("3. Ver costo de los recorridos totales")
-    print("4. Salir")
+    print("\n---Menu---")
+    print("1. log mileage")
+    print("2. View the cost of each recorded kilometer.")
+    print("3. View the cost of total distances")
+    print("4. Leave")
 
-    opcion = int(input("Digite una opción entre 1 y 4: "))
+    option = int(input("Enter an option from 1 to 4 "))
 
-    while opcion < 1 or opcion > 3:
-        print("Digite un número entre 1 y 4")
+    while option < 1 or option > 3:
+        print("Type a number from 1 to 4")
 
-    while opcion >= 1 and opcion <= 3:
-        match opcion:
+    while option >= 1 and option <= 3:
+        match option:
             case 1:
-                lista_recorridos, mant_cost, km_mant = informacion_kilometros()
+                distance_list, mant_cost, km_mant = kilometres_information()
 
-                print(f"Los valores registados son: {lista_recorridos}")
+                print(f"The recorded values are: {distance_list}")
             case 2:
-                revision = cost(lista_recorridos, mant_cost, km_mant)
+                check = cost(distance_list, mant_cost, km_mant)
 
-                print(f"{revision}")
+                print(f"{check}")
 
             case 3:
-                totalidad_recorridos = total_distance(
-                    lista_recorridos, mant_cost, km_mant
-                )
+                total_path = total_distance(distance_list, mant_cost, km_mant)
 
-                print(f"{totalidad_recorridos}")
+                print(f"{total_path}")
 
             case 4:
-                print("Saliendo...")
+                print("Leaving...")
                 break
 
             case _:
-                print("Error. Digite un dato entre 1 y 3")
+                print("Error. Tpye a number from 1 to 3.")
 
-        print("\n---Menú---")
-        print("1. Registrar kilometros")
-        print("2. Ver costo de cada kilometro registrado")
-        print("3. Ver costo de los recorridos totales")
-        print("4. Salir")
+        print("\n---Menu---")
+        print("1. log mileage")
+        print("2. View the cost of each recorded kilometer.")
+        print("3. View the cost of total distances")
+        print("4. Leave")
 
-        opcion = int(input("Digite una opción entre 1 y 4: "))
+        option = int(input("Enter an option from 1 to 4 "))
 
 
 main()
