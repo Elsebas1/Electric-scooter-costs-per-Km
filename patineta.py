@@ -30,15 +30,15 @@ def informacion_kilometros():
     return route, maintenance_cost, maintance_km
 
 
-def costos(kilometros, valor_mant, km_mant):
+def costos(kilometres, maintance_cost, km_mant):
 
-    mantenimiento_por_kilometro = valor_mant / km_mant
-    print(f"El costo por kilometro es igual a: {mantenimiento_por_kilometro}")
+    maintance_per_km = maintance_cost / km_mant
+    print(f"The km cost is: {maintance_per_km}")
 
     results = []
-    for km in kilometros:
-        costo_kilometro = mantenimiento_por_kilometro * km
-        results.append(f"El costo de {km} km es: {costo_kilometro:.0f}")
+    for km in kilometres:
+        km_cost = maintance_per_km * km
+        results.append(f"El costo de {km} km es: {km_cost:.0f}")
 
     set_limpio = set(results)
 
