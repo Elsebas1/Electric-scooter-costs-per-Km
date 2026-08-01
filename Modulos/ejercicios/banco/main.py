@@ -2,34 +2,34 @@
 
 from procesador import check_account, withdraw_money
 
-print("=== MENÚ DE OPCIONES ===")
-print("1. Ver saldo")
-print("2. Retirar dinero")
-print("3. salir")
+print("=== OPTIONS MENU ===")
+print("1. Check balance")
+print("2. Withrawal money")
+print("3. Leave")
 
-tarea = int(input("Digite un número de 1 a 3: "))
+option = int(input("Enter a number from 1 to 3"))
 
 
-while tarea != 3:
-    match tarea:
+while option != 3:
+    match option:
         case 1:
-            number = input("Escriba su número de cuenta: ")
+            number = input("Enter your account number: ")
 
             check_account(number)
 
         case 2:
-            account = input("Escriba su número de cuenta: ")
-            withdraw = int(input("Digite la cantidad de dinero que piensa retirar: "))
+            account = input("Enter your account number ")
+            withdraw = int(input("Enter the amount of money you wish to withdrawal: "))
             withdraw_money(account, withdraw)
 
         case _:
-            print("Error. Dato incorrecto")
+            print("Error. Wrong information")
 
-    print("=== MENÚ DE OPCIONES ===")
-    print("1. Ver saldo")
-    print("2. Retirar dinero")
-    print("3. salir")
+    print("=== OPTIONS MENU ===")
+    print("1. Check balance")
+    print("2. Withrawal money")
+    print("3. Leave")
 
-    tarea = int(input("Digite un número de 1 a 3: "))
+    option = int(input("Enter a number from 1 to 3: "))
 
-print("\nSaliendo del sistema de automatización ! Hasta luego.")
+print("\nLeaving the automation system.")
