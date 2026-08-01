@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 
 
-def obtener_tasa_usd_cop():
+def get_exchange_usdcop():
 
     URL = "https://open.er-api.com/v6/latest/USD"
 
@@ -20,7 +20,7 @@ def obtener_tasa_usd_cop():
 
 
 def report_from_usd_cop(usd):
-    data = obtener_tasa_usd_cop()
+    data = get_exchange_usdcop()
 
     if data is None:
         print("It was not possible to get the information")
@@ -36,7 +36,7 @@ def report_from_usd_cop(usd):
 
 
 def report_from_cop_usd(cop):
-    data = obtener_tasa_usd_cop()
+    data = get_exchange_usdcop()
 
     if data is None:
         print("It was not possible to get the information")
