@@ -13,15 +13,13 @@ def check_account(number):
     if number not in check:
         print("Error: The account login does not exist.")
 
-    print(f"El titular de la cuenta es: {check[number]['titular']}")
-    print(f"Posee un saldo de: {check[number]['saldo_usd']}")
-    print(f"El tipo de cuenta que maneja es: {check[number]['tipo_cuenta']}")
+    print(f"The account holder is: {check[number]['titular']}")
+    print(f"It has a balance of {check[number]['saldo_usd']}")
+    print(f"The type of bank account you have is {check[number]['tipo_cuenta']}")
 
 
 def withdraw_money(number_account, amount):
     upload = upload_accounts()
-
-    # print(upload[number_account]["saldo_usd"])
 
     if upload is None:
         print("System Error when attempting to connect to the bank.")
@@ -50,6 +48,6 @@ def withdraw_money(number_account, amount):
         save_accounts(upload)
 
         print(
-            f"¡Retiro exitoso! Ha retirado {amount} USD. Nuevo saldo {target['saldo_usd']}"
+            f"¡Succesful withdrawal! you have withdrawal {amount} USD. New balance {target['saldo_usd']}"
         )
         return True
