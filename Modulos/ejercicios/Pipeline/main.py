@@ -1,27 +1,27 @@
-from procesador import ejecutar_pipeline
+from procesador import executed_pipeline
 
-print("=== MENÚ DE OPCIONES ===")
-print("1. instalar_db")
-print("2. configurar_firewall")
-print("3. respaldo_datos")
-print("4. salir")
+print("=== OPTION MENU===")
+print("1. Download_db")
+print("2. firewall_configuration")
+print("3. backup_data")
+print("4. leave")
 
-tarea = int(input("Digite un número de 1 a 4: "))
+option = int(input("Enter a number from 1 to 4: "))
 
-while tarea != 4:
-    match tarea:
+while option != 4:
+    match option:
         case 1:
-            ejecutar_pipeline("instalar_db")
+            executed_pipeline("instalar_db")
 
         case 2:
-            ejecutar_pipeline("configurar_firewall")
+            executed_pipeline("configurar_firewall")
 
         case 3:
-            ejecutar_pipeline("respaldo_datos")
+            executed_pipeline("respaldo_datos")
 
         case _:
-            print("Error. Dato incorrecto")
+            print("Error. Wrong information")
 
-    tarea = int(input("Digite un número de 1 a 4: "))
+    option = int(input("Enter a number from 1 to 4: "))
 
-print("\nSaliendo del sistema de automatización ! Hasta luego.")
+print("\nLeaving automate system.")

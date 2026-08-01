@@ -1,25 +1,23 @@
-from servidor import completar_tarea, obtener_tarea
+from servidor import complete_task, get_task
 
 RAM_MAXIMA_GB = 5
 
 
-def ejecutar_pipeline(nombre_tarea):
+def executed_pipeline(homework_name):
 
-    tarea_encontrada = obtener_tarea(nombre_tarea)
+    task_found = get_task(homework_name)
 
-    if tarea_encontrada is None:
-        print("Error. La tarea no existe en el sistema.")
+    if task_found is None:
+        print("Error. The task does not exist in the system.")
         return False
 
-    if tarea_encontrada["requisito_ram_gb"] <= RAM_MAXIMA_GB:
-        completar_tarea(nombre_tarea)
-        print(
-            f"¡Éxito! Tarea {nombre_tarea} ejecutada y estado actualizado a completado."
-        )
+    if task_found["requisito_ram_gb"] <= RAM_MAXIMA_GB:
+        complete_task(homework_name)
+        print(f"Succes! Task {homework_name} executed and state updated and completed.")
         return True
     else:
         print(
-            f"Alerta: No hay suficientes recursos para {nombre_tarea}. Requiere {tarea_encontrada['requisito_ram_gb']}GB y el límite es {RAM_MAXIMA_GB}GB."
+            f"Alert: There are not enough resources for {homework_name}. Require {task_found['requisito_ram_gb']}GB and the limit is {RAM_MAXIMA_GB}GB."
         )
 
         return False

@@ -3,34 +3,34 @@ import json
 # MODULO PARA ACCEDER A LOS DATOS
 
 
-def obtener_tarea(nombre_tarea):
+def get_task(task_name):
     RUTA_JSON = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Pipeline/tareas.json"
     try:
         with open(RUTA_JSON, "r") as archivo:
             datos = json.load(archivo)
 
-        if nombre_tarea in datos:
-            return datos[nombre_tarea]
+        if task_name in datos:
+            return datos[task_name]
 
         else:
             return None
 
     except FileNotFoundError:
-        print("Este archivo no existe")
+        print("That file does not exist.")
 
 
 # ACTUALIZAR ESTADO
 
 
-def completar_tarea(nombre_tarea):
+def complete_task(task_name):
     try:
         RUTA_JSON = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Pipeline/tareas.json"
 
         with open(RUTA_JSON, "r") as archivo:
             datos = json.load(archivo)
 
-        if nombre_tarea in datos:
-            datos[nombre_tarea]["estado"] = "pendiente"
+        if task_name in datos:
+            datos[task_name]["estado"] = "pendiente"
 
         else:
             return False
