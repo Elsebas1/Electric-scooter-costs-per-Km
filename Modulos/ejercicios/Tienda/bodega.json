@@ -1,0 +1,17 @@
+{
+    "nintendo_switch": {
+        "nombre": "Nintendo Switch OLED",
+        "precio_usd": 350,
+        "stock": 5
+    },
+    "playstation_5": {
+        "nombre": "PlayStation 5 Pro",
+        "precio_usd": 700,
+        "stock": 2
+    },
+    "xbox_series_x": {
+        "nombre": "Xbox Series X",
+        "precio_usd": 500,
+        "stock": 0
+    }
+}

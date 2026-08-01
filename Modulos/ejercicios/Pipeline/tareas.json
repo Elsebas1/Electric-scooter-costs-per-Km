@@ -1,0 +1,17 @@
+{
+    "instalar_db": {
+        "descripcion": "Instalaci\u00f3n de PostgreSQL",
+        "requisito_ram_gb": 4,
+        "estado": "pendiente"
+    },
+    "configurar_firewall": {
+        "descripcion": "Configuraci\u00f3n de puertos de seguridad",
+        "requisito_ram_gb": 1,
+        "estado": "pendiente"
+    },
+    "respaldo_datos": {
+        "descripcion": "Copia de seguridad en la nube",
+        "requisito_ram_gb": 8,
+        "estado": "completado"
+    }
+}

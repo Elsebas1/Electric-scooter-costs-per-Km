@@ -1,0 +1,12 @@
+{
+  "123456": {
+    "titular": "Juan Perez",
+    "saldo_usd": 1200,
+    "tipo_cuenta": "ahorros"
+  },
+  "789012": {
+    "titular": "Maria Lopez",
+    "saldo_usd": 350,
+    "tipo_cuenta": "corriente"
+  }
+}

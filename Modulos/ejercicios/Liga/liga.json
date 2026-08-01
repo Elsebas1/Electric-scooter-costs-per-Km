@@ -1,0 +1,26 @@
+{
+    "Nacional": {
+        "partidos_jugados": 0,
+        "puntos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    "Millonarios": {
+        "partidos_jugados": 0,
+        "puntos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    "Junior": {
+        "partidos_jugados": 0,
+        "puntos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    "Tolima": {
+        "partidos_jugados": 0,
+        "puntos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    }
+}
