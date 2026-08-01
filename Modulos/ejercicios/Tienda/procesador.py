@@ -1,36 +1,34 @@
 # MÓDULO 2: PROCESAMIENTO
-# Paso 1: Importar servidor con sus funciones.
-from servidor import cargar_inventario, guardar_inventario
+
+from servidor import upload_inventory, save_inventory
 
 
-def procesar_venta(nombre_producto, cantidad):
+def process_sell(product_name, amount):
 
-    # Paso 2: Llamar el diccionario.
-    carga = cargar_inventario()
+    upload = upload_inventory()
 
-    # Paso 3: Verificar que exista el nombre del producto en el diccionario.
-    if nombre_producto in carga:
-        producto = carga[nombre_producto]
 
-        # Paso 4: Verificar la cantidad de stock solicitada con la que hay en el inventario.
+    if product_name in upload:
+        product = upload[product_name]
 
-        if producto["stock"] >= cantidad:
-            producto["stock"] = producto["stock"] - cantidad
 
-            # Paso 5: Actualizar el diccionario
+        if product["stock"] >= amount:
+            product["stock"] = product["stock"] - amount
 
-            guardar_inventario(carga)
 
-            total_venta = producto["precio_usd"] * cantidad
-            print("¡Operación exitosa!")
-            print(f"Producto: {producto['nombre']}")
-            print(f"Cantidad vendida {cantidad}")
-            print(f"El total de la venta fue: {total_venta} USD")
+
+            save_inventory(upload)
+
+            total_sell = product["precio_usd"] * amount
+            print("¡Operation success!")
+            print(f"product: {product['nombre']}")
+            print(f"amount selt {amount}")
+            print(f"The total sale was: {total_sell} USD")
 
         else:
             print(
-                f"No hay stock suficiente para el producto {carga[nombre_producto]['nombre']}"
+                f"There are not enough stock to the product {upload[product_name]['nombre']}"
             )
 
     else:
-        print(f"Error el producto {nombre_producto} no existe en el inventario.")
+        print(f"Error the product {product_name} does not exist in the inventory.")

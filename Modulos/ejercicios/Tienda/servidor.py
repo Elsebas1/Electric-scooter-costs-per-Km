@@ -2,21 +2,21 @@
 import json
 
 
-def cargar_inventario():
+def upload_inventory():
     try:
-        RUTA_ARCHIVO = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Tienda/bodega.json"
+        FILE_ROUTE = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Tienda/bodega.json"
 
-        with open(RUTA_ARCHIVO, "r") as archivo:
+        with open(FILE_ROUTE, "r") as archivo:
             return json.load(archivo)
 
     except FileNotFoundError:
-        print("No se encontró el archivo")
+        print("The file was not found.")
         return None
 
 
-def guardar_inventario(datos):
+def save_inventory(datos):
 
-    RUTA_ARCHIVO = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Tienda/bodega.json"
+    FILE_ROUTE = "/Users/sebastiangomez/Python /Modulos/archivos json/ejercicios/Tienda/bodega.json"
 
-    with open(RUTA_ARCHIVO, "w") as archivo_json:
+    with open(FILE_ROUTE, "w") as archivo_json:
         json.dump(datos, archivo_json, indent=4)
