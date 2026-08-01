@@ -3,16 +3,16 @@
 
 from procesador import register_match, table
 
-print("=== MENÚ DE OPCIONES ===")
-print("1. Ver tabla de posiciones")
-print("2. Registrar resultado de un partido")
-print("3. salir")
+print("=== OPTION MENU ===")
+print("1. View standings")
+print("2. Record a match result")
+print("3. Leave")
 
-tarea = int(input("Digite un número de 1 a 3: "))
+option = int(input("Enter a number from 1 to 3: "))
 
 
-while tarea != 3:
-    match tarea:
+while option != 3:
+    match option:
         case 1:
             table()
 
@@ -27,11 +27,11 @@ while tarea != 3:
         case _:
             print("Error. Dato incorrecto")
 
-    print("=== MENÚ DE OPCIONES ===")
-    print("1. Ver tabla de posiciones")
-    print("2. Registrar resultado de un partido")
-    print("3. salir")
 
-    tarea = int(input("Digite un número de 1 a 3: "))
+    print("=== OPTION MENU ===")
+    print("1. View standings")
+    print("2. Record a match result")
+    print("3. Leave")
+    option = int(input("Enter a number from 1 to 3: "))
 
-print("\nSaliendo del sistema de automatización ! Hasta luego.")
+print("\nLeaving of automation system")
