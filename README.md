@@ -1,10 +1,8 @@
 # PYTHON EXERCISES 🐍
 
 
-## Table of Contents 
+## General description
 
-- [Introduction][#introduction]
-- [Instalacion][#instalaciónn]
-
+This repository contains an organized collection of proyects, exercises and independent practices tasks developed while learning Python and programming logic. The structure is organized by levels of complexity, specific topics and application modules. 
 
 ## Introduction
