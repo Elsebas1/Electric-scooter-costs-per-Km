@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 
 
-def obtener_precios_mercado():
+def market_prices():
     URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd"
 
     try:
@@ -16,8 +16,8 @@ def obtener_precios_mercado():
         return None
 
 
-def generar_reporte():
-    data = obtener_precios_mercado()
+def report():
+    data = market_prices()
 
     if data is None:
         print("It was not possible to get the information")
@@ -32,7 +32,7 @@ def generar_reporte():
 
     print(f"=== REPORT ===\n{time}")
     print(f"Bitcoin price: {int(bitcoin_price)}\nEthereum price: {int(ethereum_price)}")
-    print(f"{compra_bitcoin:2f} Ethereums are needed to buy 1 bitcoin")
+    print(f"{compra_bitcoin:.2f} Ethereums are needed to buy 1 bitcoin")
 
 
-generar_reporte()
+report()
