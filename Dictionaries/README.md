@@ -1,16 +1,9 @@
 # Dictionaries in Python 🐍
 
-Este repositorio contiene ejercicios prácticos enfocados en la manipulación y uso de **diccionarios en Python**, aplicando lógica de programación para gestión de productos, membresías y descuentos.
-
+This folder containt practices exercises focused on the manipulation and use of **Python Dictionaries**, applying programming logic to the management of, memberships and discounts
 ---
 
-## 📁 Contenido del Repositorio
+## 📁 Folders Content
+* **`exercise 1.py:` **: Exercise focused on validating store membership and business rules.
+* **`exercise 2.py`**: Exercise on the mechanics of calculating discounts applied to product lists in a catalog.
 
-* **`ejercicio 1.py`**: Ejercicio enfocado en la validación de membresías de tienda y reglas de negocio.
-* **`ejercicio 2.py`**: Ejercicio de cálculo de descuentos dinámicos aplicados a una lista de productos en catálogo.
-
----
-
-## 🚀 Cómo ejecutar los scripts
-
-Asegúrate de tener instalado **Python 3.x**. Para ejecutar cualquiera de los ejercicios desde la terminal:
