@@ -8,7 +8,7 @@ This repository contains an organized collection of proyects, exercises and inde
 ## Folders
 
    * Dictionaries: The Dictionaries folder contains exercises and examples focused on th euse of dictionaries in Python. 
-   * Modules: The Modules folder brings together a series of Python projects and scripts desgined to solve practical problems, perform real-world simulations and properly structure code into reusable components.  
+   * Modules: The Modules folder brings together a series of Python proyects and scripts desgined to solve practical problems, perform real-world simulations and properly structure code into reusable components.  
 
 ## Technologies
 
