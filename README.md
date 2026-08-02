@@ -1,1 +1,4 @@
-# PYTHON EXERCISES
+# PYTHON EXERCISES 🐍
+
+
+## General Description 
